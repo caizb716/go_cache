@@ -51,13 +51,14 @@ func startAPIServer(apiAddr string, gee *geecache.Group) {
 
 }
 
+//curl "http://localhost:9999/api?key=Tom"
+//curl "http://localhost:9999/api?key=kkk"
 func main() {
 	var port int
 	var api bool
 	flag.IntVar(&port, "port", 8001, "Geecache server port")
 	flag.BoolVar(&api, "api", false, "Start a api server?")
 	flag.Parse()
-	fmt.Println(port)
 
 	apiAddr := "http://localhost:9999"
 	addrMap := map[int]string{
