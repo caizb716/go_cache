@@ -1,4 +1,4 @@
-# <center>go_cache
+# <center> go_cache
 &nbsp;&nbsp;本项目跟随[GeeCache](https://geektutu.com/post/geecache.html)实现了一个模仿groupcache的简单分布式缓存系统，整体项目包括以下几部分：  
 * LRU缓存淘汰策略：  
 &nbsp;&nbsp;最近最少使用（LRU）认为，如果数据最近被访问过，那么将来被访问的概率也会更高。LRU算法的实现是维护一个队列，如果某条记录被访问了，则移动到队尾，那么对手则是最近最少访问的数据，淘汰该条记录即可。LRU的底层数据结构包含绿色的字典，存储键和值的映射关系；红色的是双向链表实现的队列，将所有的的值放的双向链表中。  
